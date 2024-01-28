@@ -22,6 +22,13 @@ MonoBehaviour:
       rid: 8263538604846088210
     _deployPlatform:
       rid: 8263538604846088211
+  - _enabled: 1
+    _developmentBuild: 0
+    _freeDiskSpaceBeforeBuild: 1
+    _buildPlatform:
+      rid: 8263538604846088212
+    _deployPlatform:
+      rid: 8263538604846088213
   references:
     version: 2
     RefIds:
@@ -30,6 +37,14 @@ MonoBehaviour:
       data:
         appBundle: 0
     - rid: 8263538604846088211
+      type: {class: Telegram, ns: Deploy.Editor.DeployPlatforms, asm: com.facticus.deploy.editor}
+      data:
+        message: Android build
+    - rid: 8263538604846088212
+      type: {class: Android, ns: Deploy.Editor.BuildPlatforms, asm: com.facticus.deploy.editor}
+      data:
+        appBundle: 0
+    - rid: 8263538604846088213
       type: {class: Telegram, ns: Deploy.Editor.DeployPlatforms, asm: com.facticus.deploy.editor}
       data:
         message: Android build

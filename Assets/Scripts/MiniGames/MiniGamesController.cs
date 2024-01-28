@@ -5,6 +5,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using AnimatorSequencerExtensions.Extensions;
 using BrunoMikoski.AnimationSequencer;
+using UnityAtoms.BaseAtoms;
 using UnityEngine;
 using Utils;
 using Utils.Extensions;
@@ -18,6 +19,8 @@ namespace MiniGames
         [SerializeField] private AnimationSequencerController _fadeInTransition;
         [SerializeField] private AnimationSequencerController _fadeOutTransition;
         [SerializeField] private Timer _timer;
+        [SerializeField] private IntVariable _scoreVariable;
+        // [SerializeField] private uistate
 
         private readonly PrefabsToInstanceMap _miniGamesInstances = new();
         private MiniGame _currentMiniGame;
@@ -117,14 +120,15 @@ namespace MiniGames
         
         public void NotifyWin(MiniGame miniGame)
         {
+            _scoreVariable.Value += 1;
             ChangeMiniGame(miniGame);
-            Debug.Log("Win");
         }
 
         public void NotifyLose(MiniGame miniGame)
         {
-           ChangeMiniGame(miniGame);
-           Debug.Log("Lose");
+            _scoreVariable.Value = 0;
+            
+            
         }
     }
 }

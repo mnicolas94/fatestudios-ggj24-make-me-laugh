@@ -96,6 +96,13 @@
       },
       "hash": "4f28cc132222ec33f2b850b585cb64099e184fbb"
     },
+    "com.facticus.ui": {
+      "version": "https://github.com/mnicolas94/facticus-ui.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "bb2feb3299772b3f24c907b5ce5896016acb369a"
+    },
     "com.facticus.unity-atoms-extensions": {
       "version": "https://github.com/mnicolas94/facticus-unity-atoms-extensions.git",
       "depth": 0,

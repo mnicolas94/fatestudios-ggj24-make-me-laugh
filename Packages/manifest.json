@@ -2,8 +2,8 @@
   "dependencies": {
     "com.brunomikoski.animationsequencer": "0.5.4",
     "com.codewriter.triinspector": "https://github.com/codewriter-packages/Tri-Inspector.git",
-    "com.facticus.asyncutils": "https://github.com/mnicolas94/unity-async-utils.git",
     "com.facticus.animator-sequencer-extensions": "https://github.com/mnicolas94/facticus-animator-sequencer-extensions.git",
+    "com.facticus.asyncutils": "https://github.com/mnicolas94/unity-async-utils.git",
     "com.facticus.audio": "https://github.com/mnicolas94/facticus-audio.git",
     "com.facticus.deploy": "https://github.com/mnicolas94/facticus-deploy.git",
     "com.facticus.fonts-collection": "https://github.com/mnicolas94/facticus-fonts-collection.git",
@@ -11,6 +11,7 @@
     "com.facticus.loadingutils": "https://github.com/mnicolas94/unity-loading-utils.git",
     "com.facticus.modelview": "https://github.com/mnicolas94/facticus-modelview.git",
     "com.facticus.savesystem": "https://github.com/mnicolas94/unity-save-system.git",
+    "com.facticus.ui": "https://github.com/mnicolas94/facticus-ui.git",
     "com.facticus.unity-atoms-extensions": "https://github.com/mnicolas94/facticus-unity-atoms-extensions.git",
     "com.facticus.utils": "https://github.com/mnicolas94/UnityUtils.git",
     "com.github.siccity.serializablecallback": "https://github.com/mnicolas94/SerializableCallback.git",
