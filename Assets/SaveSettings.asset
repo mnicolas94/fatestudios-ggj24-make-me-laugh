@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5d6fc6f654dd5749a20c09a3cc606f8, type: 3}
+  m_Name: SaveSettings
+  m_EditorClassIdentifier: 
+  _serializer:
+    rid: 8263538604846088195
+  _encryptData: 0
+  _guidsResolver:
+    rid: 8263538604846088193
+  _searchDatabaseAssetsInPaths: []
+  _ignoreDatabaseAssetsInPaths: []
+  _populateDatabaseBeforeEnterPlayMode: 0
+  _broadcaster:
+    _onSave:
+      m_PersistentCalls:
+        m_Calls: []
+    _onLoad:
+      m_PersistentCalls:
+        m_Calls: []
+  _debugLogging: 0
+  references:
+    version: 2
+    RefIds:
+    - rid: 8263538604846088193
+      type: {class: GuidsDatabase, ns: SaveSystem.GuidsResolve, asm: com.facticus.savesystem}
+      data:
+        _assets: []
+        _guids: []
+    - rid: 8263538604846088195
+      type: {class: UnitySerializer, ns: SaveSystem.Serializers, asm: com.facticus.savesystem}
