@@ -159,7 +159,7 @@ PlayerSettings:
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
     Android: com.fatestudiosgame.LeChanclette
-    Standalone: com.fatestudiosgame.Chancleta
+    Standalone: com.fatestudiosgame.Le-Chanclette
   buildNumber:
     Standalone: 0
     VisionOS: 0
@@ -688,6 +688,7 @@ PlayerSettings:
   webGLPowerPreference: 2
   scriptingDefineSymbols:
     Android: DOTWEEN_ENABLED
+    Standalone: DOTWEEN_ENABLED
   additionalCompilerArguments: {}
   platformArchitecture: {}
   scriptingBackend:
