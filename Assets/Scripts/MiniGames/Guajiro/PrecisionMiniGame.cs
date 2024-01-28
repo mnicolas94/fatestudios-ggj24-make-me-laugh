@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Threading;
 using System.Threading.Tasks;
+using IngameDebugConsole;
 using Jnk.TinyContainer;
 using SerializableCallback;
 using UnityAtoms.BaseAtoms;
@@ -79,11 +80,15 @@ namespace MiniGames.Guajiro
             // Get the rectangular bounding box of your UI element
             Rect rect = rt.rect;
 
+            rect.center += (Vector2) rt.anchoredPosition;
+            
+            Debug.Log($"{point} : {rect}");
+            
             // Check to see if the point is in the calculated bounds
-            if (point.x >= rect.xMin + rt.position.x &&
-                point.x <= rect.xMax + rt.position.x &&
-                point.y >= rect.yMin + rt.position.y &&
-                point.y <= rect.yMax + rt.position.y)
+            if (point.x >= rect.xMin &&
+                point.x <= rect.xMax &&
+                point.y >= rect.yMin &&
+                point.y <= rect.yMax)
             {
                 return true;
             }

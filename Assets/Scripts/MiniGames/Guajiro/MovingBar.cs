@@ -4,7 +4,6 @@ namespace MiniGames.Guajiro
 {
     public class MovingBar : MonoBehaviour
     {
-        // [SerializeField] private GameObject _bar;
         [SerializeField] private RectTransform _barTransform;
         [SerializeField] private float _speed;
         [SerializeField] private Transform _startPosition;
@@ -12,7 +11,7 @@ namespace MiniGames.Guajiro
 
         private Transform _currentTarget;
         
-        public Vector3 CurrentPosition => _barTransform.position;
+        public Vector3 CurrentPosition => _barTransform.anchoredPosition;
 
         private void OnEnable()
         {

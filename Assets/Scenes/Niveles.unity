@@ -253,6 +253,67 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &91739391
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1599049829485661565, guid: f8d7e0f81a4937d4ab4b8d076d943edf, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1599049829485661565, guid: f8d7e0f81a4937d4ab4b8d076d943edf, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1599049829485661565, guid: f8d7e0f81a4937d4ab4b8d076d943edf, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1599049829485661565, guid: f8d7e0f81a4937d4ab4b8d076d943edf, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1599049829485661565, guid: f8d7e0f81a4937d4ab4b8d076d943edf, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1599049829485661565, guid: f8d7e0f81a4937d4ab4b8d076d943edf, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1599049829485661565, guid: f8d7e0f81a4937d4ab4b8d076d943edf, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1599049829485661565, guid: f8d7e0f81a4937d4ab4b8d076d943edf, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1599049829485661565, guid: f8d7e0f81a4937d4ab4b8d076d943edf, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1599049829485661565, guid: f8d7e0f81a4937d4ab4b8d076d943edf, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8897657525222722561, guid: f8d7e0f81a4937d4ab4b8d076d943edf, type: 3}
+      propertyPath: m_Name
+      value: MiniGame - Colirio
+      objectReference: {fileID: 0}
+    - target: {fileID: 8897657525222722561, guid: f8d7e0f81a4937d4ab4b8d076d943edf, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f8d7e0f81a4937d4ab4b8d076d943edf, type: 3}
 --- !u!1 &206656760
 GameObject:
   m_ObjectHideFlags: 0
@@ -1034,6 +1095,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _miniGames:
   - {fileID: 4792424794037322523, guid: 67c59865cf885d94caaca70408bb0d8f, type: 3}
+  - {fileID: 4792424794037322523, guid: f8d7e0f81a4937d4ab4b8d076d943edf, type: 3}
   - {fileID: 4792424794037322523, guid: 6f3aa4b982b3f2f41a4fd1195bea7965, type: 3}
   _fadeInTransition: {fileID: 1274309009}
   _fadeOutTransition: {fileID: 563889556}
@@ -1765,6 +1827,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1375298835957072668, guid: 6f3aa4b982b3f2f41a4fd1195bea7965, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1599049829485661565, guid: 6f3aa4b982b3f2f41a4fd1195bea7965, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -2793,6 +2859,7 @@ SceneRoots:
   - {fileID: 1376969603}
   - {fileID: 1229122609}
   - {fileID: 442882932}
+  - {fileID: 91739391}
   - {fileID: 231162523}
   - {fileID: 380229597}
   - {fileID: 1206210185}
