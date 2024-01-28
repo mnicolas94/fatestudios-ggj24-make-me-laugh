@@ -2296,10 +2296,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: MiniGame - Serrucho
       objectReference: {fileID: 0}
-    - target: {fileID: 8897657525222722561, guid: 6f3aa4b982b3f2f41a4fd1195bea7965, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
