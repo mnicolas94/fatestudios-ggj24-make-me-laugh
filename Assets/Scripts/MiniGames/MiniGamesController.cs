@@ -137,7 +137,6 @@ namespace MiniGames
 
         public void NotifyLose(MiniGame miniGame)
         {
-            _scoreVariable.Value = 0;
             _gameOverState.Open();
         }
     }
