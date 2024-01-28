@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40bab3c281b746d2a8a34d18e8eb6824, type: 3}
+  m_Name: GamePlay State
+  m_EditorClassIdentifier: 
+  _windowsManagerGetter:
+    _mode: 1
+    _value: {fileID: 0}
+    _callback:
+      _target: {fileID: 11400000, guid: 6f1c2fe1cd260854b9c1abd9e69741e3, type: 2}
+      _methodName: GetWindowsManager
+      _args: []
+      _dynamic: 0
+      _typeName: SerializableCallback.SerializableCallback`1[[UI.WindowsManager,
+        com.facticus.ui, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        Siccity.SerializableCallback, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      dirty: 0
+  _windowsPrefabs:
+  - {fileID: 7246691560998253449, guid: 9eb004bdbba0cc64e9fdf2f6a7b79254, type: 3}

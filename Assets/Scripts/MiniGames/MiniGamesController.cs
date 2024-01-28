@@ -5,6 +5,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using AnimatorSequencerExtensions.Extensions;
 using BrunoMikoski.AnimationSequencer;
+using UI;
 using UnityAtoms.BaseAtoms;
 using UnityEngine;
 using Utils;
@@ -20,7 +21,7 @@ namespace MiniGames
         [SerializeField] private AnimationSequencerController _fadeOutTransition;
         [SerializeField] private Timer _timer;
         [SerializeField] private IntVariable _scoreVariable;
-        // [SerializeField] private uistate
+        [SerializeField] private UiState _gameOverState;
 
         private readonly PrefabsToInstanceMap _miniGamesInstances = new();
         private MiniGame _currentMiniGame;
@@ -46,7 +47,7 @@ namespace MiniGames
         
         private async void Start()
         {
-            await StartMiniGame();
+            RestartGames();
         }
 
         private MiniGame GetRandomMiniGamePrefab()
@@ -71,7 +72,10 @@ namespace MiniGames
 
         private void DisposeMiniGame()
         {
-            _currentMiniGame.gameObject.SetActive(false);
+            if (_currentMiniGame != null)
+            {
+                _currentMiniGame.gameObject.SetActive(false);
+            }
         }
 
         private async void ChangeMiniGame(MiniGame miniGame)
@@ -81,7 +85,7 @@ namespace MiniGames
             
             await PlayAnimation(_fadeInTransition);
             
-            if (_currentMiniGame != null && _currentMiniGame == miniGame)
+            if (_currentMiniGame == miniGame)
             {
                 DisposeMiniGame();
             }
@@ -106,6 +110,13 @@ namespace MiniGames
             await animation.PlayingSequence.AsyncWaitForCompletion(_cts.Token);
         }
 
+        public async void RestartGames()
+        {
+            _scoreVariable.Value = 0;
+            DisposeMiniGame();
+            await StartMiniGame();
+        }
+        
         public void NotifyMiniGameEnd(MiniGame miniGame, bool didWin)
         {
             if (didWin)
@@ -127,8 +138,7 @@ namespace MiniGames
         public void NotifyLose(MiniGame miniGame)
         {
             _scoreVariable.Value = 0;
-            
-            
+            _gameOverState.Open();
         }
     }
 }
