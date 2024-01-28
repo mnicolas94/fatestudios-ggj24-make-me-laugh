@@ -828,7 +828,8 @@ PrefabInstance:
       propertyPath: m_ReferenceResolution.y
       value: 1260
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2643163873675063147, guid: de2c831a08cf8804ba255b76d46eacd2, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
