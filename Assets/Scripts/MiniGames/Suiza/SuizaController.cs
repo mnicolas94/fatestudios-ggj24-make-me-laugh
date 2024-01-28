@@ -75,6 +75,11 @@ namespace MiniGames.Suiza
 
         private async void Jump(InputAction.CallbackContext obj)
         {
+            if (_completed)
+            {
+                return;
+            }
+            
             _jumping = true;
             
             // execute animation

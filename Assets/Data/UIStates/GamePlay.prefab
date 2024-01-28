@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 7084908452598962795}
   - component: {fileID: 5128106021887163911}
   - component: {fileID: 7706605038939757249}
-  - component: {fileID: 1144437732966812092}
   m_Layer: 5
   m_Name: Serpent
   m_TagString: Untagged
@@ -138,26 +137,6 @@ MonoBehaviour:
             m_RotationOrder: 4
         isRelative: 0
         _sprites: []
---- !u!114 &1144437732966812092
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 977651494176830169}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4ed5d7b417db4030a96ba9ef7ed0828a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _time:
-    _usage: 0
-    _value: 0
-    _constant: {fileID: 0}
-    _variable: {fileID: 0}
-    _variableInstancer: {fileID: 0}
-  _sprites: []
-  _image: {fileID: 0}
 --- !u!1 &1682644412208359800
 GameObject:
   m_ObjectHideFlags: 0
