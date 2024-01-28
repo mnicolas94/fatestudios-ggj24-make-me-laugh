@@ -2,6 +2,7 @@
 using System.Threading.Tasks;
 using Jnk.TinyContainer;
 using SerializableCallback;
+using UnityAtoms.BaseAtoms;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -13,9 +14,11 @@ namespace MiniGames.Serrucho
         [SerializeField] private SerializableCallback<CancellationToken, Task> _leftAnimation;
         [SerializeField] private SerializableCallback<CancellationToken, Task> _rightAnimation;
         [SerializeField] private float _inputDelay;
-        
         [SerializeField] private SerializableCallback<CancellationToken, Task> _winAnimation;
         [SerializeField] private SerializableCallback<CancellationToken, Task> _loseAnimation;
+
+        [Header("Lose condition")]
+        [SerializeField] private FloatReference _timeToLose;
 
         [Header("Progress")]
         [SerializeField] private Transform _progressBar;
@@ -54,6 +57,8 @@ namespace MiniGames.Serrucho
             _rightInputAction.action.performed += OnRightPressed;
             
             _cts = new CancellationTokenSource();
+
+            WaitTimeAndLose();
         }
 
         private void OnDisable()
@@ -68,6 +73,28 @@ namespace MiniGames.Serrucho
 
             _cts.Dispose();
             _cts = null;
+        }
+
+        private async void WaitTimeAndLose()
+        {
+            var ct = _cts.Token;
+            await AsyncUtils.Utils.Delay(_timeToLose, ct);
+
+            if (!_completed && !_cts.IsCancellationRequested)
+            {
+                _completed = true;
+                
+                // execute win animation
+                if (_loseAnimation.target != null)
+                {
+                    await _loseAnimation.Invoke(ct);
+                }
+                
+                // lose
+                var controller = TinyContainer.Global.Get<MiniGamesController>();
+                var miniGame = TinyContainer.For(this).Get<MiniGame>();
+                controller.NotifyLose(miniGame);
+            }
         }
         
         private async void OnInputPressed(InputActionReference input)
@@ -104,7 +131,7 @@ namespace MiniGames.Serrucho
                 // win
                 var controller = TinyContainer.Global.Get<MiniGamesController>();
                 var miniGame = TinyContainer.For(this).Get<MiniGame>();
-                controller.NotifyMiniGameEnd(miniGame, true);
+                controller.NotifyWin(miniGame);
             }
 
             _currentProgress = Mathf.Clamp(_currentProgress, 0, _progressGoal);

@@ -73,7 +73,7 @@ namespace MiniGames
                 DisposeMiniGame();
             }
 
-            await AsyncUtils.Utils.Delay(1f, _cts.Token);
+            await AsyncUtils.Utils.Delay(0.1f, _cts.Token);
             
             InstantiateMiniGame();
             

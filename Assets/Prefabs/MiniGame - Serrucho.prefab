@@ -523,6 +523,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MiniGame - Serrucho
       objectReference: {fileID: 0}
+    - target: {fileID: 1183517159234841785, guid: 693b6ba9708e78841be02a70cbc668aa, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9018055473497812421, guid: 693b6ba9708e78841be02a70cbc668aa, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -665,6 +669,12 @@ MonoBehaviour:
       mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]],
       Siccity.SerializableCallback, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
     dirty: 0
+  _timeToLose:
+    _usage: 2
+    _value: 0
+    _constant: {fileID: 0}
+    _variable: {fileID: 11400000, guid: 2431ad693efa64046addb1731568190d, type: 2}
+    _variableInstancer: {fileID: 0}
   _progressBar: {fileID: 5562281275492404066}
   _progressMinPosition: {fileID: 7279161740751406602}
   _progressMaxPosition: {fileID: 8849897096307913433}
