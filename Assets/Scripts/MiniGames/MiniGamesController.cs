@@ -8,6 +8,7 @@ using BrunoMikoski.AnimationSequencer;
 using UnityEngine;
 using Utils;
 using Utils.Extensions;
+using Object = UnityEngine.Object;
 
 namespace MiniGames
 {
@@ -16,6 +17,7 @@ namespace MiniGames
         [SerializeField] private List<MiniGame> _miniGames;
         [SerializeField] private AnimationSequencerController _fadeInTransition;
         [SerializeField] private AnimationSequencerController _fadeOutTransition;
+        [SerializeField] private Timer _timer;
 
         private readonly PrefabsToInstanceMap _miniGamesInstances = new();
         private MiniGame _currentMiniGame;
@@ -39,9 +41,9 @@ namespace MiniGames
             _cts = null;
         }
         
-        private void Start()
+        private async void Start()
         {
-            ChangeMiniGame(null);
+            await StartMiniGame();
         }
 
         private MiniGame GetRandomMiniGamePrefab()
@@ -53,10 +55,15 @@ namespace MiniGames
         private void InstantiateMiniGame()
         {
             var miniGamePrefab = GetRandomMiniGamePrefab();
-            var instance = _miniGamesInstances.GetOrCreateInstance<MiniGame>(miniGamePrefab);
+            var instance = _miniGamesInstances.GetOrCreateInstance<MiniGame>(miniGamePrefab, OnCreateMiniGame);
             instance.gameObject.SetActive(true);
             _currentMiniGame = instance;
             _currentMiniGamePrefab = miniGamePrefab;
+        }
+
+        private void OnCreateMiniGame(Object miniGame)
+        {
+            ((MiniGame) miniGame).transform.SetParent(transform);
         }
 
         private void DisposeMiniGame()
@@ -66,17 +73,27 @@ namespace MiniGames
 
         private async void ChangeMiniGame(MiniGame miniGame)
         {
+            // stop timer
+            _timer.StopTimer();
+            
             await PlayAnimation(_fadeInTransition);
             
             if (_currentMiniGame != null && _currentMiniGame == miniGame)
             {
                 DisposeMiniGame();
             }
-
+            
+            // wait time
             await AsyncUtils.Utils.Delay(0.1f, _cts.Token);
             
+            await StartMiniGame();
+        }
+
+        private async Task StartMiniGame()
+        {
             InstantiateMiniGame();
-            
+            _timer.StartTimer();
+
             await PlayAnimation(_fadeOutTransition);
         }
 

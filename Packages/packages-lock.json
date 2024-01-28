@@ -23,7 +23,7 @@
       "dependencies": {
         "com.brunomikoski.animationsequencer": "0.5.4"
       },
-      "hash": "0e2111c34fa83c644a7f1f07b8e4705c806e9cbe"
+      "hash": "d81ae7c90b05b44530469f99b7e66936c797ebda"
     },
     "com.facticus.asyncutils": {
       "version": "https://github.com/mnicolas94/unity-async-utils.git",
@@ -112,7 +112,7 @@
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "c02bd864d35db30f51c140482a10cd381128993d"
+      "hash": "c46fb74cf111ee7a11b8e138cbeedeba001d0c58"
     },
     "com.github.siccity.serializablecallback": {
       "version": "https://github.com/mnicolas94/SerializableCallback.git",
