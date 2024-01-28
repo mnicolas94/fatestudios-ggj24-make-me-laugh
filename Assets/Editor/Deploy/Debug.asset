@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d6228cd6dd744bb8b6bc1150736cb0a, type: 3}
+  m_Name: Debug
+  m_EditorClassIdentifier: 
+  _repositoryBranchOrTag: main
+  _overrideVariables: []
+  _platforms:
+  - _enabled: 1
+    _developmentBuild: 0
+    _freeDiskSpaceBeforeBuild: 1
+    _buildPlatform:
+      rid: 8263538604846088210
+    _deployPlatform:
+      rid: 8263538604846088211
+  - _enabled: 1
+    _developmentBuild: 0
+    _freeDiskSpaceBeforeBuild: 1
+    _buildPlatform:
+      rid: 8263538604846088246
+    _deployPlatform:
+      rid: 8263538604846088213
+  references:
+    version: 2
+    RefIds:
+    - rid: 8263538604846088210
+      type: {class: Android, ns: Deploy.Editor.BuildPlatforms, asm: com.facticus.deploy.editor}
+      data:
+        appBundle: 0
+    - rid: 8263538604846088211
+      type: {class: Telegram, ns: Deploy.Editor.DeployPlatforms, asm: com.facticus.deploy.editor}
+      data:
+        message: Android build
+    - rid: 8263538604846088213
+      type: {class: Telegram, ns: Deploy.Editor.DeployPlatforms, asm: com.facticus.deploy.editor}
+      data:
+        message: Windows build
+    - rid: 8263538604846088246
+      type: {class: Windows, ns: Deploy.Editor.BuildPlatforms, asm: com.facticus.deploy.editor}

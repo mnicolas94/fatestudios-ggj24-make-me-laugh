@@ -23,7 +23,7 @@
       "dependencies": {
         "com.brunomikoski.animationsequencer": "0.5.4"
       },
-      "hash": "0e2111c34fa83c644a7f1f07b8e4705c806e9cbe"
+      "hash": "a9675ada13f4f9fce7c677aa0a270998ba64aaa5"
     },
     "com.facticus.asyncutils": {
       "version": "https://github.com/mnicolas94/unity-async-utils.git",
@@ -96,6 +96,13 @@
       },
       "hash": "4f28cc132222ec33f2b850b585cb64099e184fbb"
     },
+    "com.facticus.ui": {
+      "version": "https://github.com/mnicolas94/facticus-ui.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "bb2feb3299772b3f24c907b5ce5896016acb369a"
+    },
     "com.facticus.unity-atoms-extensions": {
       "version": "https://github.com/mnicolas94/facticus-unity-atoms-extensions.git",
       "depth": 0,
@@ -112,7 +119,7 @@
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "c02bd864d35db30f51c140482a10cd381128993d"
+      "hash": "c46fb74cf111ee7a11b8e138cbeedeba001d0c58"
     },
     "com.github.siccity.serializablecallback": {
       "version": "https://github.com/mnicolas94/SerializableCallback.git",
