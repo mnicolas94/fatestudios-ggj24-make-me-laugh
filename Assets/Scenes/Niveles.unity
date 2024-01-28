@@ -1685,7 +1685,7 @@ MonoBehaviour:
   - rid: 8263538604846088204
   updateType: 0
   timeScaleIndependent: 0
-  autoplayMode: 0
+  autoplayMode: 2
   startPaused: 0
   playbackSpeed: 1
   playType: 0

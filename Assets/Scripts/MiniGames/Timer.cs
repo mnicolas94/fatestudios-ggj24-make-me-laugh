@@ -40,6 +40,7 @@ namespace MiniGames
             await TweeningUtils.TweenTimeAsync(time =>
             {
                 int index = (int) (_sprites.Count * time);
+                index = Mathf.Clamp(index, 0, _sprites.Count - 1);
                 var sprite = _sprites[index];
                 _image.sprite = sprite;
             }, _time, Curves.Linear, _cts.Token);
